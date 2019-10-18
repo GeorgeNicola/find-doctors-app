@@ -1,0 +1,624 @@
+body{
+	margin:0px;
+	padding:0px;
+	font-size:20px;
+	font-family:helvetica;
+	color:#5e6b7b;
+}
+
+:root {
+    --main-color:red;
+}
+
+.hide{
+	display:none;
+}
+
+.center{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.container{
+	max-width:800px;
+	margin:auto;
+	width:100vw;
+	height:100vh;
+	position:relative;
+}
+
+.answers-container{
+	position:relative;
+	widows:100%;
+	height:85%;
+	box-sizing:border-box;
+
+	padding:0.25em;
+}
+
+
+
+
+
+/* Multiple-answers Question */
+
+.question-h2{
+	width:100%;
+	height:auto;
+	box-sizing:border-box;
+	padding:1.25em 0.5em;
+	margin:0;
+
+	font-size:3em;
+	line-height:1.35em;
+	text-align:center;
+	color:black;
+}
+
+.multiple-option-answer{
+	position:relative;
+	width:95%;
+	box-sizing:border-box;
+	padding:50px 10px;
+	margin:auto;
+	border-bottom: 3px solid #e3eef0;
+
+	display:flex;
+	align-items:center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+}
+
+.border-top{
+	border-top:3px solid #e3eef0;
+}
+
+.multiple-option-answer p{
+	margin:0;
+	padding:0;
+	font-size:2.25em;
+}
+
+ .multiple-option-answer input {
+	position: absolute;
+	z-index:1;
+	top: 50%;
+	transform:translateY(-50%);
+	right: 2.25em;
+	height: 4em;
+	width: 4em;
+
+	opacity: 0;
+	cursor: pointer;
+}
+  
+.multiple-option-answer .checkmark {
+    position: absolute;
+	top: 50%;
+	transform:translateY(-50%);
+	right: 1.5em;
+	height: 80px;
+	width: 80px;
+	border:1px solid #b4c1d1;
+	border-radius:40px;
+}
+  
+.multiple-option-answer input:checked ~ .checkmark {
+	background-color: #2196F3;
+}
+  
+.multiple-option-answer .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.multiple-option-answer input:checked ~ .checkmark:after {
+	display: block;
+}
+  
+.multiple-option-answer .checkmark:after {
+	top:22.5%;
+	left:37.5%;
+	width: 15px;
+	height: 30px;
+	border:solid white;
+	border-width: 0 5px 5px 0;
+	border-radius:2px;
+	transform: rotate(45deg);
+}
+
+
+/* Select Question */
+
+.single-option-answer{
+	position:relative;
+	width:85%;
+	box-sizing:border-box;
+	padding:30px 50px;
+	margin:50px auto;
+	border: 3px solid #e3eef0;
+	border-radius:30px;
+
+	display:flex;
+	align-items:center;
+	font-size:2.25em;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+
+	transition:all 0.5s;
+}
+
+.margin-top-0{
+	margin-top:0;
+}
+
+.single-option-answer img{
+	width:1.75em;
+	margin-right:1em;
+}
+
+
+.single-option-answer input {
+	position: absolute;
+	z-index:1;
+	top: 50%;
+	transform:translateY(-50%);
+	right: 5.5em;
+	height: 5.5em;
+	width: 5.5em;
+
+	opacity: 0;
+	cursor: pointer;
+}
+
+.single-option-answer .checkmark {
+    position: absolute;
+	top: 50%;
+	transform:translateY(-50%);
+	right: 1.5em;
+	height: 80px;
+	width: 80px;
+	border:1px solid #b4c1d1;
+	border-radius:40px;
+}
+  
+.single-option-answer input:checked ~ .checkmark {
+	background-color: #2196F3;
+}
+  
+.single-option-answer .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.single-option-answer input:checked ~ .checkmark:after {
+	display: block;
+}
+  
+.single-option-answer .checkmark:after {
+	top:20%;
+	left:37%;
+	width: 15px;
+	height: 30px;
+	border:solid white;
+	border-width: 0 5px 5px 0;
+	border-radius:2px;
+	transform: rotate(45deg);
+}
+
+.nu-inteleg{
+	width:375px;
+	font-size:2em;
+	margin-left:auto;
+	margin-right:1.75em;
+}
+
+.nu-inteleg a{
+	text-decoration:none;
+	color:#b4c1d1;	
+}
+
+.single-option-answer-selected{
+	transform:scale(0.95);
+	box-shadow:5px 5px 25px lightgrey;
+}
+
+/* Simptome */
+
+.button{
+	width:90%;
+	box-sizing:border-box;
+	padding:50px;
+	margin:auto;
+	border:4px solid #e4eff1;
+	border-radius:25px;
+}
+
+.simptoms-container .question-h2{
+	height:auto;
+	padding-bottom:40px;
+}
+
+.simptoms-container p{
+	margin:0;
+	padding:0;
+	font-size:2em;
+
+	text-align:center;
+	line-height:1.1em;
+}
+
+.simptoms-list{
+	margin-top:5em;
+}
+
+.simptom{
+	margin:25px auto;
+}
+
+.adauga-simptom{
+	cursor:pointer;
+}
+
+.simptom img{
+	width:3em;
+	margin-right:30px;
+}
+
+.simptom p{
+	width: max-content;
+	margin:0;
+	padding:0;
+	font-weight:500;
+}
+
+
+
+
+
+
+/* Cauta simptom */
+
+.search-simptoms-container{
+	font-size:2em;
+	display:flex;
+	flex-direction:column;
+}
+
+.search-simptoms-title{
+	width:100%;
+	font-weight:bold;
+	display:flex;
+	border-bottom:4px solid #e4eff1;
+}
+
+.search-simptoms-title div{
+	box-sizing:border-box;
+	border:8px solid none;
+	display: inline-block;
+	padding:35px;
+}
+
+.search-simptoms-title div p{
+	margin:0;
+	padding:0;
+}
+
+.cauta-simptom-btn{
+	text-align:right;
+	cursor:pointer;
+}
+
+.harta-corpului-btn{
+	text-align:left;
+	cursor:pointer;
+}
+
+.search-simptoms-selected{
+	border-bottom:8px solid #4187ff;
+}
+
+.search-container{
+	width:100%;
+	flex-grow:1;
+
+	display:flex;
+	align-items:center;
+	justify-content: center;
+}
+
+.search-box{
+	width:90%;
+	height:90%;
+	border:4px solid #b9c3c5;
+	border-radius:25px;
+	margin:auto;
+	margin-top:15px;
+}
+
+.map-container{
+	width:100%;
+	flex-grow:1;
+}
+
+
+
+.autocomplete {
+	/*the container must be positioned relative:*/
+	position: relative;
+	display: flex;
+	box-sizing:border-box;
+	padding:15px;
+	width:100%;
+	border-bottom:4px solid #b9c3c5;
+}
+
+.autocomplete img{
+	height:1.25em;
+	margin-right:35px;
+}
+
+#myInput{
+	width:80%;
+	font-size:1.25em;
+	background-color:white;
+}
+
+.autocomplete input {
+	border: 1px solid transparent;
+	background-color: #f1f1f1;
+	padding: 20px;
+	width:100%;
+  }
+.autocomplete input[type=text] {
+	background-color: #f1f1f1;
+	width: 100%;
+  }
+.autocomplete input[type=submit] {
+	background-color: DodgerBlue;
+	color: #fff;
+  }
+.autocomplete-items {
+	position: absolute;
+	border: 1px solid #d4d4d4;
+	border-bottom: none;
+	border-top: none;
+	z-index: 99;
+	/*position the autocomplete items to be the same width as the container:*/
+	top: 100%;
+	left: 0;
+	right: 0;
+	word-wrap: break-word;
+}
+.autocomplete-items div {
+	padding: 10px;
+	cursor: pointer;
+	background-color: #fff;
+	border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+	/*when hovering an item:*/
+	background-color: #e9e9e9;
+}
+.autocomplete-active {
+	/*when navigating through the items using the arrow keys:*/
+	background-color: DodgerBlue !important;
+	color: #ffffff;
+}
+
+
+/* Logo Page */
+
+.logo-container{
+	width:100%;
+	height:35%;
+	background-image:url('../img/page-bg.png');
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+.text-box{
+	width:100%;
+	height:40%;
+}
+
+.text-box .question-h2{
+	font-size:3.5em;
+}
+
+.text-box p{
+	margin-top:75px;
+	text-align:center;
+	font-size:2em;
+}
+
+.gaseste-medici{
+	background-color:#4385ff;
+	color:white;
+	font-size:40px;
+	text-align:center;
+}
+
+.fara-medic{
+	margin-top:25px;
+	font-size:40px;
+	text-align:center;
+	border:none;
+}
+
+.c100{
+	background-color:transparent;
+}
+
+.c100 span{
+	position:Absolute;
+	z-index:2;
+	top:50%;
+	left:55%;
+	transform:translate(-50%,-20%);
+	color:#4385ff;
+	font-size:45px;
+}
+
+.c100 img{
+	width:110px;
+	position:Absolute;
+	z-index:2;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-75%);
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (orientation:landscape) { 
+	.container{
+		min-height:720px;
+		height:auto;
+	}
+}
+
+
+@media only screen and (min-width: 700px) {
+	.question-h2{
+		padding:30px 10px;
+	}
+}
+
+@media only screen and (min-width: 1025px) {
+	body{
+		font-size:12px;
+	}
+
+	.container{
+		height:100vh;
+		min-height:720px;
+	}
+
+	.question-h2{
+		display:block;
+		margin:auto;
+		max-width:600px;
+		padding:30px 10px;
+		padding-bottom:10px;
+	}
+
+	.single-option-answer{
+		width:95%;
+	}
+
+	.multiple-option-answer{
+		padding:30px 10px;
+	}
+
+	.multiple-option-answer .checkmark{
+		width:45px;
+		height:45px;
+	}
+
+	.multiple-option-answer .checkmark::after{
+		left:37.5%;
+		width: 10px;
+		height: 20px;
+		border-width: 0 3px 3px 0;
+	}
+
+	.multiple-option-answer input{
+		right:1.25em;
+	}
+
+	/*  Single Option Answer */
+
+	.single-option-answer{
+		margin:30px auto;
+		padding:20px 30px;
+	}
+
+	.single-option-answer .checkmark{
+		width:45px;
+		height:45px;
+	}
+
+	.single-option-answer .checkmark::after{
+		left:37.5%;
+		width: 10px;
+		height: 20px;
+		border-width: 0 3px 3px 0;
+	}
+
+	.single-option-answer input{
+		right:1.25em;
+	}
+
+	.nu-inteleg{
+		margin-right:1.75em;
+		text-align:right;
+	}
+
+	/* Simptome */
+
+	.simptom{
+		min-height:3em;
+		margin:30px auto;
+		padding:30px 10px;
+	}
+	
+	.simptom img{
+		width:3em;
+	}
+
+	.button{
+		max-width:600px;
+		padding:20px 10px;
+	}
+
+	.gaseste-medici{
+		font-size:2.25em;
+	}
+
+	.fara-medic{
+		font-size:2.25em;
+		margin-top:15px;
+	}
+
+	.c100.big {
+		font-size: 160px;
+	}
+
+	.logo-container{
+		height:40%;
+	}
+	
+	.text-box{
+		height:35%;
+	}
+
+	.text-box p{
+		margin-top:30px;
+	}
+
+	.c100 img{
+		width:85px;
+	}
+	
+	.c100 span{
+		font-size:30px;
+	}
+}

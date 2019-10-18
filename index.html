@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="assets/css/circle.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+</head>
+<body>
+
+<form>
+
+	<!-- Multiple-answers Question -->
+	<div class="container multiple-answer-container"> 
+		<h2 class="question-h2">Simtiti vreunul dintre urmatoarele simptome?</h2> 
+		<div class="answers-container">
+			<div class="multiple-option-answer border-top">
+				<p>Puls rapid</p>
+				<input type="checkbox">
+ 				<span class="checkmark"></span>
+			</div>
+			<div class="multiple-option-answer">
+				<p>Anxietate</p>
+				<input type="checkbox">
+ 				<span class="checkmark"></span>
+			</div>
+			<div class="multiple-option-answer">
+				<p>Lipsit(a) de putere si obosit</p>
+				<input type="checkbox">
+ 				<span class="checkmark"></span>
+			</div>
+			<div class="multiple-option-answer">
+				<p>Respiratie dificila</p>
+				<input type="checkbox">
+ 				<span class="checkmark"></span>
+			</div>
+			<div class="multiple-option-answer">
+				<p>Nod in gat</p>
+				<input type="checkbox">
+ 				<span class="checkmark"></span>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Single-answers Question -->
+	<div class="container single-answer-container">
+		<h2 class="question-h2 ">Sunteti fumator?</h2> 
+		<div class="answers-container">
+			<div class="single-option-answer margin-top-0">
+				<img src="assets/img/check.png">
+				<p>Da</p>
+				<input type="radio" name='single-answer'>
+ 				<span class="checkmark"></span>
+			</div>
+			<div class="single-option-answer">
+				<img src="assets/img/close.png">
+				<p>Nu</p>
+				<input type="radio" name='single-answer'>
+ 				<span class="checkmark"></span>
+			</div>
+			<div class="single-option-answer">
+				<img src="assets/img/arrow.png">
+				<p>Nu stiu</p>
+				<input type="radio" name='single-answer'>
+ 				<span class="checkmark"></span>
+			</div>
+			<div class="nu-inteleg"><a href="#"> Nu inteleg intrebarea </a></div>
+		</div>
+	</div>
+
+
+	<!-- Simptome -->
+	<div class="container simptoms-container">
+		<h2 class="question-h2 ">Adauga simptome</h2> 
+		<p> Adauga cat mai multe simptome </br> pentru rezultate precise</p>
+		<div class="simptoms-list"></div>
+			<div class="button center simptom">
+				<p>Durere in piept</p>
+			</div>
+			<div class="button center simptom adauga-simptom">
+				<img src="assets/img/add.png">
+				<p>Adauga simptome</p>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Cauta Simptom-->
+	<div class="container search-simptoms-container hide">
+		<div class="search-simptoms-title center">
+			<div class="cauta-simptom-btn center search-simptoms-selected">
+				Cauta simptom
+			</div>
+			<div class="harta-corpului-btn center">
+				Harta corpului
+			</div>
+		</div>
+		<div class="search-container">
+			<div class="search-box">
+				<div class="autocomplete center">
+					<img src="assets/img/search.png"> 
+					<input id="myInput" type="text" name="myCountry" placeholder="Simptom">
+				</div>
+			</div>
+		</div>
+		<div class="map-container hide">
+
+		</div>
+	</div>
+
+	<!-- Cauta Simptom-->
+	<div class="container medics-container">
+		<div class="logo-container center">
+			<div class="c100 p95 big">
+				<span>95%</span>
+				<img src="assets/img/logo.png">
+				<div class="slice">
+					<div class="bar"></div>
+					<div class="fill"></div>
+				</div>
+			</div>
+		</div>
+		<div class="text-box">
+			<h2 class="question-h2 sectia-medic">CARDIOLOGIE</h2> 
+			<p>
+				<span class="client-name">Vlad</span>, pe baza analizei efectuate, iti <br> sugeram sa consulti un medic <span class="tip-medic">cardiolog.</span><br>
+				Noi te putem redirectiona catre <span class="nr-medici"> cinci </span><br>medici cardiologi in cateva secunde. 
+			</p>
+		</div>
+		<div class="button center gaseste-medici"> Gaseste medici </div>
+		<div class="button center fara-medic"> Vreau sa-mi gasesc singur medicul </div>
+	</div>
+
+	
+
+</form>
+
+
+<script type="text/javascript" src="assets/js/search.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+<script>
+</script>
+</body>
+</html>
